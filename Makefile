@@ -1,10 +1,4 @@
-
-SHELL := /bin/bash
-obj−m := jpeghwdec.o
-jpeghwdec-y:jpeghwdec.o
-
-EXTRA_CFLAGS += $(USER_EXTRA_CFLAGS)
-EXTRA_CFLAGS += -I$(src)/include
+obj-m := jpeghwdec.o
 
 default: all
 
@@ -13,3 +7,4 @@ all:
 
 clean:
 	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(shell pwd)  clean
+
